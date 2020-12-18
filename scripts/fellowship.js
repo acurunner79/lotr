@@ -170,6 +170,16 @@ $("#middle-earth").append($aside);
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+$('.hobbit').remove()
+const $ul = $("<ul>")
+
+for (let index = 0; index < hobbits.length; index++) {
+  const $li = $("<li>")
+  $li.addClass("hobbit")
+  $li.text(hobbits[index])
+  $ul.append($li)
+}
+$("#Rivendale").append($ul)
 
 };
 
