@@ -152,6 +152,7 @@ for (let index = 0; index < buddies.length; index++){
   $li.addClass("buddy");
   $li.text(buddies[index]);
   $ul.append($li);
+  $aside.append($ul)
 }
   // 3. give each of the buddies a class of "buddy"
 $("#middle-earth").append($aside);
