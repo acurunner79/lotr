@@ -107,7 +107,7 @@ $div.attr("id", "the-ring")
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 const $liarray = $(".hobbit")
-console.log($liarray[0])
+// console.log($liarray[0])
 $($liarray[0]).append($div)
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
@@ -122,10 +122,16 @@ $($liarray[0]).append($div)
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+const $ul = $("<ul>");
   // 2. give each of the baddies a class of "baddy"
-
+  for ( let index = 0; index < baddies.length; index++){
+    const $li = $("<li>");
+    $li.addClass("daddy");
+    $li.text(baddies[index]);
+    $ul.append($li);
+  }
   // 3. remember to append the ul to Mordor
+$("#Mordor").append($ul)
 
 };
 
@@ -138,11 +144,17 @@ const makeBaddies = () => {
 const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+const $aside = $("<aside>");
+const $ul = $("<ul>");
   // 2. display an unordered list of buddies in the aside
-
+for (let index = 0; index < buddies.length; index++){
+  const $li = $("<li>");
+  $li.addClass("buddy");
+  $li.text(buddies[index]);
+  $ul.append($li);
+}
   // 3. give each of the buddies a class of "buddy"
-
+$("#middle-earth").append($aside);
   // 4. don't forget to append them to the aside
 
 };
