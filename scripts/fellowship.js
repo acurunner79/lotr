@@ -179,7 +179,7 @@ for (let index = 0; index < hobbits.length; index++) {
   $li.text(hobbits[index])
   $ul.append($li)
 }
-$("#Rivendale").append($ul)
+$("#Rivendell").append($ul)
 
 };
 
