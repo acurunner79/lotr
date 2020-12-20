@@ -105,6 +105,12 @@ ul {
   margin: auto;
 }
 
+div.the-fellowship, .the-white {
+  border:1px solid gray;
+  background-color: white;
+  margin-right: 90%;
+}
+
 
 /*aside {
   display: inline-block;

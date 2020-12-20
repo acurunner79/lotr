@@ -107,7 +107,7 @@ $div.attr("id", "the-ring")
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 const $liarray = $(".hobbit")
-// console.log($liarray[0])
+
 $($liarray[0]).append($div)
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
@@ -226,6 +226,11 @@ $("#middle-earth").append($div);
 // Chapter 9
 // ============
 const theBalrog = () => {
+
+const buddies = $(".buddy")
+$(buddies[0]).text("Gandolf the White")
+$(buddies[0]).attr("class", "the-white")
+
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
 
