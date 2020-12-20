@@ -72,7 +72,7 @@ article:nth-child(2) {
 article:nth-child(3) {
   left: 71%;
   top: 81%;
-  /*background: url(../images/eye_of_sauron.png) no-repeat;*/*/
+  /*background: url(../images/eye_of_sauron.png) no-repeat;*/
   background-position: 0em;
   background-size: 7em;
   height: 25%;
@@ -105,12 +105,15 @@ ul {
   margin: auto;
 }
 
-div.the-fellowship, .the-white {
+.the-white {
   border:1px solid gray;
   background-color: white;
   margin-right: 90%;
 }
-
+ 
+.target {
+  text-decoration: line-through;
+}
 
 /*aside {
   display: inline-block;
@@ -167,3 +170,4 @@ div.the-fellowship, .the-white {
   }
 
 }
+

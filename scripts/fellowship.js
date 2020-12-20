@@ -106,9 +106,9 @@ $div.attr("id", "the-ring")
 
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
-const $liarray = $(".hobbit")
+const $hobbits = $(".hobbit")
 
-$($liarray[0]).append($div)
+$($hobbits[0]).append($div)
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 
 };
@@ -217,6 +217,7 @@ $("#middle-earth").append($div);
 //   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
   $($div).append($('.buddy'));
   $($div).append($('.hobbit'));
+  ($div).prepend($h1);
 };
 
 // COMMIT YOUR WORK
@@ -227,9 +228,10 @@ $("#middle-earth").append($div);
 // ============
 const theBalrog = () => {
 
-const buddies = $(".buddy")
-$(buddies[0]).text("Gandolf the White")
-$(buddies[0]).attr("class", "the-white")
+const buddies = $(".buddy");
+$(buddies[0]).text("Gandolf the White");
+$(buddies[0]).attr("class", "the-white");
+
 
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
@@ -247,7 +249,11 @@ $(buddies[0]).attr("class", "the-white")
 // Chapter 10
 // ============
 const hornOfGondor = () => {
-
+window.alert("The horn Gondor has been blown");
+const buddies  = $(".buddy");
+$(buddies[3]).addClass("target");
+const baddies = $(".daddy")
+$(baddies[2]).remove()
   // 1. create a pop-up alert that the horn of gondor has been blown
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
@@ -264,6 +270,16 @@ const hornOfGondor = () => {
 // ============
 const itsDangerousToGoAlone = () => {
 
+  const $hobbits = $(".hobbit");
+  $hobbits[0].remove();
+  $hobbits[1].remove();
+  $("#Mordor").append($hobbits[0]);
+  $("#Mordor").append($hobbits[1]);
+
+  const $div = $("<div>")
+$div.attr("id", "mount-doom")
+
+$("#Mordor").append($div)
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
   // 2. add a div with an id of 'mount-doom' to Mordor
@@ -278,6 +294,11 @@ const itsDangerousToGoAlone = () => {
 // ============
 const weWantsIt = () => {
 
+  const $div = $("<div>");
+  $div.attr("id", "gollum");
+  $("#Mordor").append($div);
+
+
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
   // 2. Move the ring from Frodo and give it to Gollum
@@ -286,6 +307,10 @@ const weWantsIt = () => {
 
 };
 
+const $div = $("<div>");
+$div.attr("id", "the-ring");
+$("#gollum").append;
+
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
 
@@ -293,6 +318,24 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
+
+  $("#gollum").remove();
+
+  const $baddies = $(".daddy")
+
+  for ( let index = 0; index < baddies.length; index++) {
+    $(".daddy").remove()
+  }
+$(".hobbit").remove();
+  const $ul = $("<ul>")
+
+for (let index = 0; index < hobbits.length; index++) {
+  const $li = $("<li>")
+  $li.addClass("hobbit")
+  $li.text(hobbits[index])
+  $ul.append($li)
+}
+$("#The-Shire").append($ul)
 
   // 1. remove Gollum and the Ring from the DOM
 
